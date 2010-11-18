@@ -1,0 +1,1 @@
+Shell script to build FuncUnit from source, translated from the instructions found here: https://github.com/jupiterjs/funcunit/raw/master/README into an automated script. Some modifications have been added as required in order to build the project. Changes/Additions from original instructions are marked under "Note:"
