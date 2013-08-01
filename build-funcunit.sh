@@ -30,7 +30,6 @@ EXIT_CODE=`expr ${EXIT_CODE} + $?`
 if [[ ${EXIT_CODE} -ne 0 ]]; then
 	echo ""
     echo " ----------------------------------------------- "
-    echo "|    * * * CANNOT INSTALL SGT DONOWITZ * * *    |"
     echo "|                                               |"
     echo "| Please install curl, as it is required:       |"
     echo "|                                               |"
