@@ -8,6 +8,38 @@
 #
 ###############################################################################
 
+# Verifying pre-requisites:
+EXIT_CODE=0
+which npm &> /dev/null
+EXIT_CODE=`expr ${EXIT_CODE} + $?`
+if [[ ${EXIT_CODE} -ne 0 ]]; then
+	echo ""
+    echo " ----------------------------------------------- "
+    echo "|                                               |"
+    echo "| Please install NPM, as it is required:        |"
+    echo "|                                               |"
+    echo "| http://nodejs.org/download                    |"
+    echo "|                                               |"
+    echo " ----------------------------------------------- "	
+    echo ""
+    exit $((${EXIT_CODE}))
+fi
+
+which curl &> /dev/null
+EXIT_CODE=`expr ${EXIT_CODE} + $?`
+if [[ ${EXIT_CODE} -ne 0 ]]; then
+	echo ""
+    echo " ----------------------------------------------- "
+    echo "|    * * * CANNOT INSTALL SGT DONOWITZ * * *    |"
+    echo "|                                               |"
+    echo "| Please install curl, as it is required:       |"
+    echo "|                                               |"
+    echo "| http://curl.haxx.se/docs/install.html         |"
+    echo "|                                               |"
+    echo " ----------------------------------------------- "	
+    echo ""
+    exit $((${EXIT_CODE}))
+fi
 
 git clone https://github.com/bitovi/funcunit.git
 
